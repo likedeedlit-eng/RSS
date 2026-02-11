@@ -1,0 +1,12 @@
+module RssNewsModule
+BusyIndicator 254.0 content/BusyIndicator.qml
+PasswordDialog 254.0 content/PasswordDialog.qml
+RssFeeds 254.0 content/RssFeeds.qml
+Main 254.0 Main.qml
+MainEntry 254.0 MainEntry.qml
+AddDialog 254.0 content/AddDialog.qml
+Sidebar 254.0 content/Sidebar.qml
+NewsListContainer 254.0 content/NewsListContainer.qml
+DetailContainer 254.0 content/DetailContainer.qml
+SettingsDialog 254.0 content/SettingsDialog.qml
+Notification 254.0 cotent/Notification.qml

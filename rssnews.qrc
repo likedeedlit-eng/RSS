@@ -1,0 +1,14 @@
+<RCC>
+    <qresource>
+        <file>content/BusyIndicator.qml</file>
+        <file>content/PasswordDialog.qml</file>
+        <file>content/RssFeeds.qml</file>
+        <file>main.qml</file>
+        <file>MainEntry.qml</file>
+        <file>rssnews.qmlproject</file>
+        <file>content/AddDialog.qml</file>
+        <file>content/Sidebar.qml</file>
+        <file>content/NewsListContainer.qml</file>
+        <file>content/DetailContainer.qml</file>
+    </qresource>
+</RCC>
