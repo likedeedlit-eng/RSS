@@ -8,9 +8,9 @@ jobs:
   build-macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install Qt
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v4
         with:
           version: '6.8.0'
           modules: 'qtquickcontrols2 qtqmlxmllistmodel qtsql qtnetwork qtconcurrent qtquickdialogs2'
@@ -23,7 +23,7 @@ jobs:
           cd build
           macdeployqt rssnews.app -dmg
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rssnews-macos
           path: build/rssnews.dmg
