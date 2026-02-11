@@ -1,0 +1,29 @@
+name: Build for macOS
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '6.8.0'
+          modules: 'qtquickcontrols2 qtqmlxmllistmodel qtsql qtnetwork qtconcurrent qtquickdialogs2'
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build --config Release
+      - name: Create DMG
+        run: |
+          cd build
+          macdeployqt rssnews.app -dmg
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: rssnews-macos
+          path: build/rssnews.dmg
